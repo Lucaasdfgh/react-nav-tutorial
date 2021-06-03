@@ -6,14 +6,18 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 
 const Stack = createStackNavigator();
-
+const {useState} = React
 
 function HomeScreen({ navigation: { navigate } }) {
+  const [counter, setCounter] = useState(0)
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Text>Home Screen</Text>
       <Button title="Go to details" 
       onPress={() => navigate("Details"), {}}/>
+      <Button onClick={()=> {
+        setCounter(counter+1)
+      }}></Button>
     </View>
   );
 }
