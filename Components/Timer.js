@@ -1,16 +1,5 @@
 import React, {Component} from "react"
 
-    const myArray = [
-    "esplendor",
-    "diciendo",
-    "impredecible",
-    "problema",
-    "terreno",
-    "instante",
-    ]
-    const randomItemGenerator = () => (
-    myArray[Math.floor(Math.random() * myArray.length)]
-    )
     class Timer extends Component{
    
     state = {
@@ -50,9 +39,9 @@ import React, {Component} from "react"
         const {seconds} = this.state
 
         return(
-            <div className="omega">
+            <Text className="omega">
                 { seconds === 0 ? <h1>finish</h1> : <h1>{seconds}</h1>}
-            </div>
+            </Text>
         )
     }
 }
